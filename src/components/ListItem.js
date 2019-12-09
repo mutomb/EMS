@@ -3,7 +3,9 @@ import { Text, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { CardSection } from './common';
 
-class ListItem extends Component {  
+/**manage display of individual employee */
+class ListItem extends Component { 
+    /**open employee edit scene when clicked */ 
     onRowPress() {
         const { employee } = this.props;
         Actions.employeeEdit({ employee });

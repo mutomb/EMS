@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     phone: '',
     shift: ''
 };
-/** handle changes to employee details */
+/**provide employee States to employee forms */
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case EMPLOYEE_UPDATE:

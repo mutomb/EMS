@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { View, Text, Picker } from 'react-native';
 import { CardSection, Input } from './common';
 import { employeeUpdate } from '../actions';
+/** text input fields for creating, updating employee */
 
 class EmployeeForm extends Component {
-
+    /** fiel type and value*/
     onInputChange({ prop, value }) {
         this.props.employeeUpdate({ prop, value });
     }
@@ -49,10 +50,12 @@ class EmployeeForm extends Component {
         );
     }
 }
+/**map values typed in */
 const mapStateToProps = state => {
     const { name, phone, shift } = state.employeeForm;
     return { name, phone, shift }; 
 };
+/**connect employee updating action creator */
 export default connect(mapStateToProps, { employeeUpdate })(EmployeeForm);
 const styles = {
     pickerTextStyle: {

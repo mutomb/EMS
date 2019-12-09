@@ -7,15 +7,17 @@ import {
     loginUser,
 } from '../actions';
 import { Button, Card, CardSection, Input, Spinner } from './common';
-
+/** manage login form */
 class LoginForm extends Component {
-    
+    /** fire action creator when email typed*/
     onEmailChange(email) {
         this.props.emailChanged(email);  
     }
+    /** fire action creator when password typed*/
     onPassworChange(password) {
         this.props.passwordChanged(password);
     }
+    /** fire action creator when login clicked*/  
     onButtonPress() {
         const { email, password } = this.props;
         this.props.loginUser({ email, password });
@@ -29,6 +31,7 @@ class LoginForm extends Component {
             );
         }
     }
+    /**display spinner when processing request */
     renderButton() {
         if (this.props.loading) {
             return <Spinner size='large' />;
@@ -65,7 +68,7 @@ class LoginForm extends Component {
         );
     }
 }
-
+/**map typed in values and process state */
 const mapStateToProps = ({ auth }) => {
     const { email, password, error, loading } = auth; 
     return ({ 
@@ -75,4 +78,5 @@ const mapStateToProps = ({ auth }) => {
         loading
     });
 };
+/**action creator for input fields attached */
 export default connect(mapStateToProps, { emailChanged, passwordChanged, loginUser })(LoginForm);

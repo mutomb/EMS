@@ -1,5 +1,5 @@
 import { EMPLOYEES_FETCH_SUCCESS } from '../actions/types';
-/**provide data of all employees */
+/**provide employee collection as States */
 const INITIAL_STATE = {};
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {

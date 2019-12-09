@@ -3,7 +3,9 @@
     "name": "Employee Management System",
     "slug": "EMS",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "android": {
+      "package": "com.companyname.EMS"
+    },
     "platforms": [
       "ios",
       "android",
@@ -24,7 +26,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.companyname.EMS"
     }
   }
 }

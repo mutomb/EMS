@@ -15,13 +15,14 @@ export { CardSection };
 
 const styles = {
     containerStyle: {
-     borderBottomWidth: 1,
-     padding: 5,
-     backgroundColor: '#fff',
+     borderWidth: 5,
+     paddingHorizontal: 5,
+     paddingVertical: 15,
      justifyContent: 'flex-start',
      flexDirection: 'row',   
      borderColor: '#ddd',
-     position: 'relative'
+     position: 'relative', 
+     backgroundColor: 'rgba(241, 194, 50, 0.6)'
     }
 };
 

@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'; /** tells redux to use a middleware */
 import ReduxThunk from 'redux-thunk'; /** middleware for asynchrous/AJAX redux 
-                                           by allowing action creators to return a function */
+                                          by allowing action creators to return a function */
 import firebase from 'firebase';
 import reducers from './src/reducers';
 import Router from './src/Router';
 
 class App extends Component {
   state={
-    loggedIn: null
+    loggedIn: null,
+    isSplashReady: false,
+    isAppReady: false,
   }
   componentWillMount() {
     firebase.initializeApp({ /** configure connection to firebase-server*/

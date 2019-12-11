@@ -5,4 +5,6 @@ export * from './Header';
 export * from './Input';
 export * from './Spinner';
 export * from './Confirm';
+export * from './AppLogo';
+export * from './ButtonRound';
 /**facilitate import of resuable components */

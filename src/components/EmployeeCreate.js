@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { ImageBackground, ScrollView } from 'react-native';
 import { Card, CardSection, Button } from './common';
 import { employeeCreate, reset } from '../actions';
 import EmployeeForm from './EmployeeForm';
@@ -17,6 +18,8 @@ class EmployeeCreate extends Component {
     }
     render() {
         return (
+            <ImageBackground style={{ flex: 1 }} source={require('../../assets/emp-payroll.png')}>
+            <ScrollView>
             <Card>
                 <EmployeeForm {...this.props} />
                 <CardSection>
@@ -26,7 +29,9 @@ class EmployeeCreate extends Component {
                         Create
                     </Button>
                 </CardSection>
-            </Card>            
+            </Card>
+            </ScrollView>     
+            </ImageBackground>       
         );
     }
 }

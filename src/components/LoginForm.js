@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Text, View } from 'react-native';
+import { Text, View, ImageBackground, ScrollView } from 'react-native';
 import { 
     emailChanged, 
     passwordChanged, 
@@ -11,7 +11,7 @@ import { Button, Card, CardSection, Input, Spinner } from './common';
 class LoginForm extends Component {
     /** fire action creator when email typed*/
     onEmailChange(email) {
-        this.props.emailChanged(email);  
+        this.props.emailChanged(email);
     }
     /** fire action creator when password typed*/
     onPassworChange(password) {
@@ -25,8 +25,14 @@ class LoginForm extends Component {
     renderError() {
         if (this.props.error) {
             return ( 
-                <View style={{ backgroundColor: 'white' }}>
-                    <Text style={{ alignSelf: 'center', fontSize: 20 }}>{this.props.error}</Text>
+                <View style={{ backgroundColor: '#FF5858' }}>
+                    <Text 
+                    style={{
+                         alignSelf: 'center', 
+                         fontSize: 20, 
+                         color: 'blue' }}
+                    >
+                         {this.props.error}</Text>
                 </View>
             );
         }
@@ -40,7 +46,9 @@ class LoginForm extends Component {
     }
     render() {
         const { email, password } = this.props;
-        return (
+        return ( 
+            <ImageBackground style={{ flex: 1 }} source={require('../../assets/emp-payroll.png')}>
+            <ScrollView>
             <Card>
                 <CardSection>
                     <Input 
@@ -65,6 +73,8 @@ class LoginForm extends Component {
                 </CardSection>
                 
             </Card>
+            </ScrollView>
+            </ImageBackground>
         );
     }
 }

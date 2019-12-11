@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ImageBackground, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import Communications from 'react-native-communications';
@@ -37,6 +38,8 @@ class EmployeeEdit extends Component {
     }
     render() {
         return (
+        <ImageBackground style={{ flex: 1 }} source={require('../../assets/emp-payroll.png')}>
+        <ScrollView>
         <Card>
             <EmployeeForm />
             <CardSection>
@@ -62,6 +65,8 @@ class EmployeeEdit extends Component {
                 Are you sure you want to delete this
             </Confirm>
         </Card>
+        </ScrollView>
+        </ImageBackground>
         );
     }
 }

@@ -4,7 +4,7 @@
     "slug": "EMS",
     "privacy": "public",
     "android": {
-      "package": "com.companyname.EMS"
+      "package": "com.companyname.ems"
     },
     "platforms": [
       "ios",
@@ -13,10 +13,10 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/logo.png",
+      "resizeMode": "contain", 
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -27,7 +27,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.companyname.EMS"
+      "bundleIdentifier": "com.companyname.ems"
     }
   }
 }

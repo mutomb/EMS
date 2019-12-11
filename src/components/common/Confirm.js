@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { CardSection } from './CardSection';
 
 const Confirm = ({ children, onAccept, onDecline, visible }) => {
-    const {cardSectionStyle, textStyle, containerStyle } = styles;
+    const { cardSectionStyle, textStyle, containerStyle } = styles;
     return (
         <Modal
         visible={visible}
@@ -23,9 +23,8 @@ const Confirm = ({ children, onAccept, onDecline, visible }) => {
                 </CardSection>
             </View>
         </Modal>
-    )
-
-}
+    );
+};
 const styles = {
     containerStyle: {
         backgroundColor: 'rgba(0, 0, 0, 0.75)',
@@ -34,7 +33,8 @@ const styles = {
         justifyContent: 'center'
     },
     cardSectionStyle: {
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#FFC038'
     },
     textStyle: {
         flex: 1,
@@ -42,7 +42,6 @@ const styles = {
         textAlign: 'center',
         lineHeight: 40
     }
-}
-
+};
 
 export { Confirm };

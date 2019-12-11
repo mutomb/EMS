@@ -9,3 +9,4 @@ export const EMPLOYEE_CREATE = 'employee_create';
 export const EMPLOYEES_FETCH_SUCCESS = 'employees_fetch_success';
 export const EMPLOYEE_SAVE_SUCCESS = 'employee_save_success';
 export const RESET_TO_INITIAL = 'reset_to_initial';
+export const SEARCH_TEXT_CHANGED = 'search_text_changed';
